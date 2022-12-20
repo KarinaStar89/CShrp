@@ -6,19 +6,20 @@
 
 // 32679 -> 6
 
-Console.WriteLine("Введите число a");
-int a = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите число");
+int number = Convert.ToInt32(Console.ReadLine());
 
-while(a > 1000)
+while (number > 1000)
 {
-  a = a / 10;
+    number = number / 10;
 }
 
-if((a / 100) < 1)
+if ((number / 100) < 1)
 {
     Console.WriteLine($"Третьей цифры нет");
 }
-else{
-int thirdDigit = a % 10;
-Console.WriteLine($"Третья цифра: {thirdDigit}");
+else
+{
+    int thirdDigit = number % 10;
+    Console.WriteLine($"Третья цифра: {thirdDigit}");
 }

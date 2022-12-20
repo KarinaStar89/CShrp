@@ -4,8 +4,8 @@
 // 782 -> 8
 // 918 -> 1
 
-Console.WriteLine("Введите число a от 100 до 999");
-int a = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите число от 100 до 999");
+int number = Convert.ToInt32(Console.ReadLine());
 
-int secondDigit = (a / 10) % 10;
+int secondDigit = (number / 10) % 10;
 Console.WriteLine($"Вторая цифра: {secondDigit}");
