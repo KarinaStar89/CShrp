@@ -8,8 +8,14 @@
 // 3 | 27
 // 4 | 64
 // 5 | 125
-Console.WriteLine($"Введите натуральное число :");
+Console.WriteLine($"Введите положительное целое число");
 int number = Convert.ToInt32(Console.ReadLine());
+
+while(number < 1)
+{
+    Console.WriteLine($"Введите положительное целое число");
+    number = Convert.ToInt32(Console.ReadLine());
+}
 Cube(number);
 
 void Cube(int number)
