@@ -4,21 +4,33 @@
 
 // 2, 4 -> 16
 
-int a = GetNumber("Введите число");
-int b = GetNumber("Введите степень числа");
+double a = GetNumber("Введите число");
+double b = GetPower("Введите степень числа");
 
-int result = System.Math.Pow(a, b);
+double result = System.Math.Pow(a, b);
 
 Console.WriteLine($"Число {a} в степени {b} равно {result}");
 
-int GetNumber(string text)
+double GetNumber(string text)
 {
     Console.WriteLine(text);
-    double number = Convert.ToInt32(Console.ReadLine());
+    double number = Convert.ToDouble(Console.ReadLine());
+    return number;
+}
+
+double GetPower(string text)
+{
+    Console.WriteLine(text);
+    double number = Convert.ToDouble(Console.ReadLine());
     while(number < 1)
     {
-        Console.WriteLine($"Введите положительное целое число");
-        number = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine($"Введите положительное число");
+        number = Convert.ToDouble(Console.ReadLine());
+    }
+
+    while (number % 1 != 0) {
+        Console.WriteLine($"Введите целое число");
+        number = Convert.ToDouble(Console.ReadLine());
     }
     return number;
 }
