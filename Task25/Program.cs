@@ -1,12 +1,12 @@
 ﻿
-var a = GetNumber("Введите число");
-var b = GetNumber("Введите степень числа");
+int a = GetNumber("Введите число");
+int b = GetNumber("Введите степень числа");
 
-var result = System.Math.Pow(a, b);
+int result = System.Math.Pow(a, b);
 
 Console.WriteLine($"Число {a} в степени {b} равно {result}");
 
-double GetNumber(string text)
+int GetNumber(string text)
 {
     Console.WriteLine(text);
     double number = Convert.ToInt32(Console.ReadLine());
