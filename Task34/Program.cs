@@ -1,4 +1,7 @@
-﻿
+﻿// Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
+
+// [345, 897, 568, 234] -> 2
+
 Console.WriteLine($"Введите количество элементов в массиве");
 int size = Convert.ToInt32(Console.ReadLine());
 
@@ -13,7 +16,7 @@ var printArray = PrintArray(array);
 
 var count = GetCoutPositiveInt(array);
 
-Console.WriteLine($"Количество положительных элементов массива {printArray} равно {count}");
+Console.WriteLine($"Количество чётных чисел в массиве {printArray} равно {count}");
 
 int[] CreateArrayRndInt(int size, int min, int max)
 {
