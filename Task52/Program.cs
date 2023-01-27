@@ -7,7 +7,7 @@
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
 
-var matrix = CreateMatrixRndInt(4, 4, -99, 99);
+var matrix = CreateMatrixRndInt(2, 5, -99, 99);
 PrintMatrix(matrix);
 
 var avgColumns = AvgInColumnMatrix(matrix);
@@ -17,16 +17,16 @@ Console.WriteLine($"Среднее арифметическое каждого �
 string AvgInColumnMatrix(int[,] matrix)
 {
     string result = "";
-    for (int i = 0; i < matrix.GetLength(0); i++)
+    for (int i = 0; i < matrix.GetLength(1); i++)
     {
         double sumColumn = 0;
 
-        for (int j = 0; j < matrix.GetLength(1); j++)
+        for (int j = 0; j < matrix.GetLength(0); j++)
         {
            sumColumn = sumColumn + matrix[j , i];
         }
 
-        double avgColumn = Math.Round(Convert.ToDouble((sumColumn / matrix.GetLength(1))), 2);
+        double avgColumn = Math.Round(Convert.ToDouble((sumColumn / matrix.GetLength(0))), 2);
 
         if(i == 0)
         {
