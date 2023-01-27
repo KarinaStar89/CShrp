@@ -12,7 +12,7 @@
 
 
 
-var matrix = CreateMatrixRndInt(4, 4, -99, 99);
+int[,] matrix = CreateMatrixRndInt(4, 4, -99, 99);
 PrintMatrix(matrix);
 
 Console.WriteLine($"Введите номер строки в массиве");
@@ -73,7 +73,7 @@ int[,] CreateMatrixRndInt(int rowsCount, int columnsCount, int min, int max)
 
 void PrintMatrix(int[,] matrix)
 {
-    var result = "";
+    string result = "";
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         Console.Write("[");

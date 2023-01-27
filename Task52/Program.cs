@@ -7,10 +7,10 @@
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
 
-var matrix = CreateMatrixRndInt(2, 5, -99, 99);
+int[,] matrix = CreateMatrixRndInt(2, 5, -99, 99);
 PrintMatrix(matrix);
 
-var avgColumns = AvgInColumnMatrix(matrix);
+string avgColumns = AvgInColumnMatrix(matrix);
 
 Console.WriteLine($"Среднее арифметическое каждого столбца: {avgColumns}");
 

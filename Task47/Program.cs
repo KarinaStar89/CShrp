@@ -26,7 +26,7 @@ while (columnsCount < 1)
     columnsCount = Convert.ToInt32(Console.ReadLine());
 }
 
-var matrix = CreateMatrixRndDouble(rowsCount, columnsCount, -99, 99);
+double[,] matrix = CreateMatrixRndDouble(rowsCount, columnsCount, -99, 99);
 PrintMatrix(matrix);
 
 double[,] CreateMatrixRndDouble(int rowsCount, int columnsCount, int min, int max)
@@ -46,10 +46,10 @@ double[,] CreateMatrixRndDouble(int rowsCount, int columnsCount, int min, int ma
 
 void PrintMatrix(double[,] matrix)
 {
-    for (var i = 0; i < matrix.GetLength(0); i++)
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
         Console.Write("[");
-        for (var j = 0; j < matrix.GetLength(1); j++)
+        for (int j = 0; j < matrix.GetLength(1); j++)
         {
             if (j < matrix.GetLength(1) - 1)
             {
