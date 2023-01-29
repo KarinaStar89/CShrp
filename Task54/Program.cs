@@ -66,7 +66,6 @@ void Swap(ref int aFirstArg, ref int aSecondArg)
 
 void PrintMatrix(int[,] matrix)
 {
-    string result = "";
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         Console.Write("[ ");
