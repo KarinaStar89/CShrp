@@ -21,7 +21,7 @@ while (countRownsAndColumns.Item1 == countRownsAndColumns.Item2)
 
 int[,] matrix = CreateMatrixRndInt(countRownsAndColumns.Item1, countRownsAndColumns.Item2, -99, 99);
 
-Console.WriteLine($"Задан массив: ");
+Console.WriteLine($"Задана матрица: ");
 PrintMatrix(matrix);
 Console.WriteLine($"");
 
@@ -70,7 +70,7 @@ int[] SumRowMatrix(int[,] matrix)
 
 (int, int) GetCountRownsAndColumns()
 {
-    Console.WriteLine($"Введите число строк элементов в массиве");
+    Console.WriteLine($"Введите число строк в матрице");
     int rowsCount = Convert.ToInt32(Console.ReadLine());
 
     while (rowsCount < 1)
@@ -79,7 +79,7 @@ int[] SumRowMatrix(int[,] matrix)
         rowsCount = Convert.ToInt32(Console.ReadLine());
     }
 
-    Console.WriteLine($"Введите число столбцов элементов в массиве");
+    Console.WriteLine($"Введите число столбцов в матрице");
     int columnsCount = Convert.ToInt32(Console.ReadLine());
 
     while (columnsCount < 1)

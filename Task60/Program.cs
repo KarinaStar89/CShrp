@@ -4,7 +4,7 @@
 // 66(0,0,0) 27(0,0,1) 25(0,1,0) 90(0,1,1)
 // 34(1,0,0) 26(1,0,1) 41(1,1,0) 55(1,1,1)
 
-Console.WriteLine($"Введите число строк элементов в массиве");
+Console.WriteLine($"Введите число строк в матрице");
 int rowsCount = Convert.ToInt32(Console.ReadLine());
 
 while (rowsCount < 1)
@@ -13,7 +13,7 @@ while (rowsCount < 1)
     rowsCount = Convert.ToInt32(Console.ReadLine());
 }
 
-Console.WriteLine($"Введите число столбцов элементов в массиве");
+Console.WriteLine($"Введите число столбцов в матрице");
 int columnsCount = Convert.ToInt32(Console.ReadLine());
 
 while (columnsCount < 1)
@@ -22,7 +22,7 @@ while (columnsCount < 1)
     columnsCount = Convert.ToInt32(Console.ReadLine());
 }
 
-Console.WriteLine($"Введите глубину в массиве");
+Console.WriteLine($"Введите глубину в матрице");
 int depthCount = Convert.ToInt32(Console.ReadLine());
 
 while (depthCount < 1)
