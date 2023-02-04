@@ -2,11 +2,11 @@
 // m = 2, n = 3 -> A(m,n) = 9
 // m = 3, n = 2 -> A(m,n) = 29
 
-(int, int) readData = GetMAndN();
-int akk = AkkermanFunc(readData.Item1, readData.Item2);
+(ulong, ulong) readData = GetMAndN();
+ulong akk = AkkermanFunc(readData.Item1, readData.Item2);
 Console.WriteLine($"Функции Аккермана с помощью рекурсии чисел m = {readData.Item1} и n = {readData.Item2} равна {akk}");
 
-int AkkermanFunc(int m, int n)
+ulong AkkermanFunc(ulong m, ulong n)
 {
     if (m == 0)
     {
@@ -19,24 +19,24 @@ int AkkermanFunc(int m, int n)
     return AkkermanFunc(m - 1, AkkermanFunc(m, n - 1));
 }
 
-(int, int) GetMAndN()
+(ulong, ulong) GetMAndN()
 {
     Console.WriteLine($"Введите m");
-    int m = Convert.ToInt32(Console.ReadLine());
+    ulong m = Convert.ToUInt64(Console.ReadLine());
 
-    while (m < 1)
+    while (m < 0)
     {
         Console.WriteLine($"Введите положительное целое число");
-        m = Convert.ToInt32(Console.ReadLine());
+        m = Convert.ToUInt64(Console.ReadLine());
     }
 
     Console.WriteLine($"Введите n");
-    int n = Convert.ToInt32(Console.ReadLine());
+    ulong n = Convert.ToUInt64(Console.ReadLine());
 
-    while (n < 1)
+    while (n < 0)
     {
         Console.WriteLine($"Введите положительное целое число");
-        n = Convert.ToInt32(Console.ReadLine());
+        n = Convert.ToUInt64(Console.ReadLine());
     }
 
     return (m, n);
