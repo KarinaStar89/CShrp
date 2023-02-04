@@ -3,30 +3,21 @@
 // M = 1; N = 15 -> 120
 // M = 4; N = 8. -> 30
 
-Console.WriteLine($"Введите от какого числа считать");
-int from = Convert.ToInt32(Console.ReadLine());
 
-while (from < 1)
+(int, int) readData = GetFromAndTo();
+
+while (readData.Item1 > readData.Item2)
 {
-    Console.WriteLine($"Введите положительное целое число");
-    from = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine($"До какого числа должна быть больше чем от какого числа");
+    readData = GetFromAndTo();
 }
 
-Console.WriteLine($"Введите до какого числа считать");
-int to = Convert.ToInt32(Console.ReadLine());
+int[] array = new int[(readData.Item2 + 1) - readData.Item1];
 
-while (to < 1)
-{
-    Console.WriteLine($"Введите положительное целое число");
-    to = Convert.ToInt32(Console.ReadLine());
-}
-
-int[] array = new int[(to + 1) - from];
-
-FillRecursiveArray(array, 0, from);
+FillRecursiveArray(array, 0, readData.Item1);
 int sumArray = GetSumArray(array);
 
-Console.WriteLine($"Сумма чисел от {from} до {to} равна {sumArray}");
+Console.WriteLine($"Сумма чисел от {readData.Item1} до {readData.Item2} равна {sumArray}");
 
 
 int GetSumArray(int[] array)
@@ -51,4 +42,27 @@ void FillRecursiveArray(int[] array, int pos, int value)
         array[pos] = value;
         FillRecursiveArray(array, pos + 1, value + 1);
     }
+}
+
+(int, int) GetFromAndTo()
+{
+    Console.WriteLine($"Введите от какого числа считать");
+    int from = Convert.ToInt32(Console.ReadLine());
+
+    while (from < 1)
+    {
+        Console.WriteLine($"Введите положительное целое число");
+        from = Convert.ToInt32(Console.ReadLine());
+    }
+
+    Console.WriteLine($"Введите до какого числа считать");
+    int to = Convert.ToInt32(Console.ReadLine());
+
+    while (to < 1)
+    {
+        Console.WriteLine($"Введите положительное целое число");
+        to = Convert.ToInt32(Console.ReadLine());
+    }
+
+    return (from, to);
 }
