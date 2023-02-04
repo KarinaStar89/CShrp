@@ -3,7 +3,7 @@
 // N = 5 -> "5, 4, 3, 2, 1"
 // N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 
-Console.WriteLine($"Введите N");
+Console.WriteLine($"Введите от какого числа считать");
 int n = Convert.ToInt32(Console.ReadLine());
 
 while (n < 1)
@@ -16,9 +16,9 @@ int[] array =  new int[n];
 FillRecursiveArray(array, n);
 string printArray = PrintArray(array);
 
-Console.WriteLine($"N = {n} -> {printArray}");
+Console.WriteLine($"Все натуральные числа в промежутке от {n} до 1 равна {printArray}");
 
-int[] FillRecursiveArray(int[] array, int n)
+void FillRecursiveArray(int[] array, int n)
 {
     int pos = array.Length - n;
     array[pos] = n;
@@ -29,9 +29,9 @@ int[] FillRecursiveArray(int[] array, int n)
     }
     else if (n == 1)
     {
-        return array;
+        return;
     }
-    return array;
+    return;
 }
 
 string PrintArray(int[] array)
