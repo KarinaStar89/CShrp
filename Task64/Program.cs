@@ -12,7 +12,7 @@ while (n < 1)
     n = Convert.ToInt32(Console.ReadLine());
 }
 
-int[] array =  new int[n];
+int[] array = new int[n];
 FillRecursiveArray(array, n);
 string printArray = PrintArray(array);
 
@@ -22,7 +22,7 @@ void FillRecursiveArray(int[] array, int n)
 {
     int pos = array.Length - n;
     array[pos] = n;
-    
+
     if (n > 1)
     {
         FillRecursiveArray(array, n - 1);
